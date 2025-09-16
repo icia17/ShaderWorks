@@ -118,6 +118,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""SwitchMouse"",
+                    ""type"": ""Button"",
+                    ""id"": ""835f91f5-461c-4225-b6f1-bc21048b1d9c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -230,6 +239,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""ChangeScene"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b9d0f913-6e5d-45d4-980b-01e044f5368a"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchMouse"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -241,6 +261,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_ChangeScene = m_Player.FindAction("ChangeScene", throwIfNotFound: true);
+        m_Player_SwitchMouse = m_Player.FindAction("SwitchMouse", throwIfNotFound: true);
     }
 
     ~@PlayerInputActions()
@@ -324,6 +345,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_ChangeScene;
+    private readonly InputAction m_Player_SwitchMouse;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -347,6 +369,10 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/ChangeScene".
         /// </summary>
         public InputAction @ChangeScene => m_Wrapper.m_Player_ChangeScene;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/SwitchMouse".
+        /// </summary>
+        public InputAction @SwitchMouse => m_Wrapper.m_Player_SwitchMouse;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -382,6 +408,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @ChangeScene.started += instance.OnChangeScene;
             @ChangeScene.performed += instance.OnChangeScene;
             @ChangeScene.canceled += instance.OnChangeScene;
+            @SwitchMouse.started += instance.OnSwitchMouse;
+            @SwitchMouse.performed += instance.OnSwitchMouse;
+            @SwitchMouse.canceled += instance.OnSwitchMouse;
         }
 
         /// <summary>
@@ -402,6 +431,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @ChangeScene.started -= instance.OnChangeScene;
             @ChangeScene.performed -= instance.OnChangeScene;
             @ChangeScene.canceled -= instance.OnChangeScene;
+            @SwitchMouse.started -= instance.OnSwitchMouse;
+            @SwitchMouse.performed -= instance.OnSwitchMouse;
+            @SwitchMouse.canceled -= instance.OnSwitchMouse;
         }
 
         /// <summary>
@@ -463,5 +495,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnChangeScene(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SwitchMouse" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitchMouse(InputAction.CallbackContext context);
     }
 }

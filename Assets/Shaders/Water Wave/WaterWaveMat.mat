@@ -19,7 +19,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: _EdgeLength
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -78,7 +78,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EdgeLength: 50
+    - _EdgeLength: 2
     - _FoamDistance: 0.5
     - _FoamStrength: 1.5
     - _FresnelStrenght: 0.5
@@ -106,7 +106,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MaxWaveHeightSine: {r: 1, g: 1.1, b: 0, a: 0}
     - _TextureTilingXY: {r: 6, g: 6, b: 0, a: 0}
-    - _WaterColor: {r: 0.40094304, g: 0.79178333, b: 1, a: 1}
+    - _WaterColor: {r: 0.40094298, g: 0.79178333, b: 1, a: 1}
     - _WaterDarkLightMinMax: {r: 1.35, g: 2, b: 0, a: 0}
     - _WaveDirection: {r: -1, g: 0, b: -0.05, a: 0}
   m_BuildTextureStacks: []

@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private InputActionReference moveAction;
     [SerializeField] private InputActionReference lookAction;
     [SerializeField] private InputActionReference sceneChangeAction;
+    [SerializeField] private InputActionReference escapeAction;
     [SerializeField] private Transform cameraTransform;
 
     [Header("Movement Settings")]
@@ -19,6 +20,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float maxPitch = 80f;
     [SerializeField] private float rotationSmooth = 10f;
 
+    [Header("Mouse Mode Settings")]
+    [SerializeField] private bool startWithMouseLocked = true;
+
     private Rigidbody rb;
     private Vector2 moveInput;
     private Vector2 lookInput;
@@ -27,13 +31,17 @@ public class PlayerController : MonoBehaviour
     private float targetPitch;
 
     private float currentYaw; 
-    private float currentPitch; 
+    private float currentPitch;
+
+    private bool isMouseControlEnabled = true; // Track mouse control state
+    private bool wasMouseControlEnabled; // To detect state changes
 
     private void OnEnable()
     {
         moveAction.action.Enable();
         lookAction.action.Enable();
         sceneChangeAction.action.performed += HandleSceneChanging;
+        escapeAction.action.performed += HandleEscapeToggle; // Enable ESC action
     }
 
     private void OnDisable()
@@ -41,13 +49,18 @@ public class PlayerController : MonoBehaviour
         moveAction.action.Disable();
         lookAction.action.Disable();
         sceneChangeAction.action.performed -= HandleSceneChanging;
+        escapeAction.action.performed -= HandleEscapeToggle; // Disable ESC action
     }
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-        Cursor.lockState = CursorLockMode.Locked;
+        
+        // Set initial mouse state
+        isMouseControlEnabled = startWithMouseLocked;
+        wasMouseControlEnabled = isMouseControlEnabled;
+        UpdateCursorState();
 
         // Initialize targets
         targetYaw = transform.eulerAngles.y;
@@ -59,9 +72,25 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         moveInput = moveAction.action.ReadValue<Vector2>();
-        lookInput = lookAction.action.ReadValue<Vector2>();
+        
+        // Only read look input if mouse control is enabled
+        if (isMouseControlEnabled)
+        {
+            lookInput = lookAction.action.ReadValue<Vector2>();
+        }
+        else
+        {
+            lookInput = Vector2.zero;
+        }
 
         HandleRotation();
+        
+        // Check if we need to update cursor state
+        if (wasMouseControlEnabled != isMouseControlEnabled)
+        {
+            UpdateCursorState();
+            wasMouseControlEnabled = isMouseControlEnabled;
+        }
     }
 
     private void FixedUpdate()
@@ -77,20 +106,24 @@ public class PlayerController : MonoBehaviour
 
     private void HandleRotation()
     {
-        // Update target yaw & pitch based on input
-        targetYaw += lookInput.x * lookSensitivity;
-        targetPitch -= lookInput.y * lookSensitivity;
-        targetPitch = Mathf.Clamp(targetPitch, minPitch, maxPitch);
+        // Only handle rotation if mouse control is enabled
+        if (isMouseControlEnabled)
+        {
+            // Update target yaw & pitch based on input
+            targetYaw += lookInput.x * lookSensitivity;
+            targetPitch -= lookInput.y * lookSensitivity;
+            targetPitch = Mathf.Clamp(targetPitch, minPitch, maxPitch);
 
-        // Smoothly interpolate toward targets
-        currentYaw = Mathf.LerpAngle(currentYaw, targetYaw, rotationSmooth * Time.deltaTime);
-        currentPitch = Mathf.LerpAngle(currentPitch, targetPitch, rotationSmooth * Time.deltaTime);
+            // Smoothly interpolate toward targets
+            currentYaw = Mathf.LerpAngle(currentYaw, targetYaw, rotationSmooth * Time.deltaTime);
+            currentPitch = Mathf.LerpAngle(currentPitch, targetPitch, rotationSmooth * Time.deltaTime);
 
-        // Apply yaw to body
-        transform.rotation = Quaternion.Euler(0f, currentYaw, 0f);
+            // Apply yaw to body
+            transform.rotation = Quaternion.Euler(0f, currentYaw, 0f);
 
-        // Apply pitch to camera
-        cameraTransform.localRotation = Quaternion.Euler(currentPitch, 0f, 0f);
+            // Apply pitch to camera
+            cameraTransform.localRotation = Quaternion.Euler(currentPitch, 0f, 0f);
+        }
     }
 
     private void HandleSceneChanging(InputAction.CallbackContext ctx)
@@ -101,5 +134,47 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.Instance.ChangeScene(Mathf.RoundToInt(currentSceneChangeInput));
         }
+    }
+
+    private void HandleEscapeToggle(InputAction.CallbackContext ctx)
+    {
+        // Toggle mouse control state
+        isMouseControlEnabled = !isMouseControlEnabled;
+        
+        Debug.Log($"Mouse control {(isMouseControlEnabled ? "enabled" : "disabled")}");
+    }
+
+    private void UpdateCursorState()
+    {
+        if (isMouseControlEnabled)
+        {
+            // Lock cursor for game control
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            // Free cursor for UI interaction
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+    }
+
+    // Public method to set mouse control state (useful for UI buttons)
+    public void SetMouseControlEnabled(bool enabled)
+    {
+        isMouseControlEnabled = enabled;
+    }
+
+    // Public method to get current mouse control state
+    public bool IsMouseControlEnabled()
+    {
+        return isMouseControlEnabled;
+    }
+
+    // Public method to toggle mouse control (can be called from UI or other scripts)
+    public void ToggleMouseControl()
+    {
+        isMouseControlEnabled = !isMouseControlEnabled;
     }
 }

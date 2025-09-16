@@ -32,6 +32,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "SwitchMouse",
+                    "type": "Button",
+                    "id": "835f91f5-461c-4225-b6f1-bc21048b1d9c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -144,6 +153,17 @@
                     "action": "ChangeScene",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "b9d0f913-6e5d-45d4-980b-01e044f5368a",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchMouse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
