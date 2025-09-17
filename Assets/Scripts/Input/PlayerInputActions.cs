@@ -127,6 +127,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchEditor"",
+                    ""type"": ""Value"",
+                    ""id"": ""c78696cf-d7b9-4f7e-ac9c-62871d5f20a3"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -250,6 +259,39 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""SwitchMouse"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""3a55832f-70ac-4639-bdc2-99dcae84d7fb"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchEditor"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""4f604591-44c1-458c-89ae-0d7e69e2f09f"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchEditor"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""1c863972-b318-42f1-9d89-889c1b7c265e"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchEditor"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -262,6 +304,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_ChangeScene = m_Player.FindAction("ChangeScene", throwIfNotFound: true);
         m_Player_SwitchMouse = m_Player.FindAction("SwitchMouse", throwIfNotFound: true);
+        m_Player_SwitchEditor = m_Player.FindAction("SwitchEditor", throwIfNotFound: true);
     }
 
     ~@PlayerInputActions()
@@ -346,6 +389,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_ChangeScene;
     private readonly InputAction m_Player_SwitchMouse;
+    private readonly InputAction m_Player_SwitchEditor;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -373,6 +417,10 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/SwitchMouse".
         /// </summary>
         public InputAction @SwitchMouse => m_Wrapper.m_Player_SwitchMouse;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/SwitchEditor".
+        /// </summary>
+        public InputAction @SwitchEditor => m_Wrapper.m_Player_SwitchEditor;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -411,6 +459,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @SwitchMouse.started += instance.OnSwitchMouse;
             @SwitchMouse.performed += instance.OnSwitchMouse;
             @SwitchMouse.canceled += instance.OnSwitchMouse;
+            @SwitchEditor.started += instance.OnSwitchEditor;
+            @SwitchEditor.performed += instance.OnSwitchEditor;
+            @SwitchEditor.canceled += instance.OnSwitchEditor;
         }
 
         /// <summary>
@@ -434,6 +485,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @SwitchMouse.started -= instance.OnSwitchMouse;
             @SwitchMouse.performed -= instance.OnSwitchMouse;
             @SwitchMouse.canceled -= instance.OnSwitchMouse;
+            @SwitchEditor.started -= instance.OnSwitchEditor;
+            @SwitchEditor.performed -= instance.OnSwitchEditor;
+            @SwitchEditor.canceled -= instance.OnSwitchEditor;
         }
 
         /// <summary>
@@ -502,5 +556,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSwitchMouse(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SwitchEditor" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitchEditor(InputAction.CallbackContext context);
     }
 }

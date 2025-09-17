@@ -119,7 +119,7 @@ Material:
     - _MaxWaveHeightSine: {r: 0.18, g: 1.1, b: 0, a: 0}
     - _PanDir: {r: -1.4, g: 0, b: 0, a: 0}
     - _TextureTilingXY: {r: 6, g: 6, b: 0, a: 0}
-    - _WaterColor: {r: 0.40094247, g: 0.79178333, b: 1, a: 1}
+    - _WaterColor: {r: 0.40094236, g: 0.79178333, b: 1, a: 1}
     - _WaterDarkLightMinMax: {r: 0.45, g: 0.7, b: 0, a: 0}
     - _WaveDirection: {r: -1, g: 0, b: -0.05, a: 0}
   m_BuildTextureStacks: []
