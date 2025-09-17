@@ -14,7 +14,7 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -85,6 +85,9 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Shadow1: 0.607
+    - _Shadow2: 0.312
+    - _Shadow3: 0
     - _ShadowNum: 0.7
     - _Shadowforce2: 0.148
     - _Shadowforce3: 0.231
@@ -96,7 +99,7 @@ Material:
     - __dirty: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color0: {r: 0.108490564, g: 0.14288157, b: 1, a: 0}
-    - _Color1: {r: 0.5991083, g: 0, b: 0.7830189, a: 0}
+    - _Color0: {r: 0.108490534, g: 0.14288154, b: 1, a: 0}
+    - _Color1: {r: 0.5991082, g: 0, b: 0.7830188, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
