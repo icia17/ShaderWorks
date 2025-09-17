@@ -348,7 +348,7 @@ MonoBehaviour:
     propertyType: 0
     floatRange: {x: -2, y: 2}
     isSlider: 1
-  - propertyName: _Sombra1
+  - propertyName: _Sombra2
     displayName: Material 2
     propertyType: 0
     floatRange: {x: -2, y: 2}
@@ -439,7 +439,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: bd848e4ccbc31984ebe665f811f690c2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
