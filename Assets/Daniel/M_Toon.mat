@@ -61,8 +61,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Texture0:
         m_Texture: {fileID: 2800000, guid: 302951faffe230848aa0d3df7bb70faa, type: 3}
-        m_Scale: {x: 1.63, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Scale: {x: 5.94, y: 1}
+        m_Offset: {x: 2.99, y: 0}
     - _TextureSample1:
         m_Texture: {fileID: 2800000, guid: bca2297e6d257934b865d220d15e2689, type: 3}
         m_Scale: {x: 1.33, y: 1}
@@ -85,8 +85,8 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Shadow1: 0.607
-    - _Shadow2: 0.312
+    - _Shadow1: 0.699
+    - _Shadow2: 0.386
     - _Shadow3: 0
     - _ShadowNum: 0.7
     - _Shadowforce2: 0.148
