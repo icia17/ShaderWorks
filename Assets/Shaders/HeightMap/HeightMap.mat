@@ -110,7 +110,7 @@ Material:
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _Color: {r: 0.2853327, g: 0.86415094, b: 0.7129481, a: 0}
+    - _Color: {r: 0.28533268, g: 0.86415094, b: 0.7129481, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Offset: {r: 1.22, g: -1.05, b: -2.48, a: 0}
     - _Tiling: {r: 1, g: 3.39, b: 0, a: 0}
