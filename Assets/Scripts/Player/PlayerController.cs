@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
     {
         isMouseControlEnabled = !isMouseControlEnabled;
         
-        UISwitcher.Instance.SwitchVisibility();
+        UISwitcher.Instance?.SwitchVisibility();
     }
 
     private void HandleSwitchView(InputAction.CallbackContext ctx)
@@ -138,7 +138,7 @@ public class PlayerController : MonoBehaviour
         int dir = Mathf.RoundToInt(ctx.ReadValue<float>()); // -1 for Q, +1 for E
         if (dir != 0)
         {
-            UISwitcher.Instance.SwitchToRelative(dir);
+            UISwitcher.Instance?.SwitchToRelative(dir);
         }
     }
 
