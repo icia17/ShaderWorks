@@ -44,7 +44,7 @@ Shader "HeightResizeShader"
 }
 /*ASEBEGIN
 Version=18900
-253.6;80.8;814.7999;351.8;1381.086;-97.18328;1.730975;True;False
+-1718;-94;590;567;1186.525;89.06965;1.730975;False;False
 Node;AmplifyShaderEditor.WorldPosInputsNode;6;-721.9161,322.5113;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.RangedFloatNode;9;-702.1927,465.596;Inherit;False;Property;_MaxHeight;Max Height;0;0;Create;True;0;0;0;False;0;False;20;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.NormalVertexDataNode;1;-618.9218,67.58624;Inherit;False;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
@@ -64,4 +64,4 @@ WireConnection;10;0;3;0
 WireConnection;10;1;8;0
 WireConnection;0;11;10;0
 ASEEND*/
-//CHKSM=E844F1E8E75FE8D1B756508DFE9143ABE893DE59
+//CHKSM=C40080804DE55D9AB6BE6FC4CD4CA995E65CBEA6

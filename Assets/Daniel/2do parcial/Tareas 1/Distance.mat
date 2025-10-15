@@ -7,14 +7,14 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: UV 1
-  m_Shader: {fileID: 4800000, guid: d0dd307d11e838f47b6abbadeb8bb9ce, type: 3}
+  m_Name: Distance
+  m_Shader: {fileID: 4800000, guid: 14587226939d65347855ad2398e069e1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 1
+  m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -23,20 +23,20 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Texture0:
+    - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
-        m_Texture: {fileID: 2800000, guid: 273bfcfa24c693c41b8aedd61a5d8735, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample1:
-        m_Texture: {fileID: 2800000, guid: 8b9896eef5bfa754ba8c8230bb40eec6, type: 3}
-        m_Scale: {x: -1.22, y: 1}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _TextureSample2:
-        m_Texture: {fileID: 2800000, guid: 0ad200a494caf0f43a31858677a3fd81, type: 3}
+    - _tex3coord:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -45,18 +45,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Float0: -0.04
-    - _Float1: -1.34
-    - _La2datextura: 0
-    - _Shadow1: 1
-    - _Shadow2: 1
-    - _Shadow3: 1
-    - _Sombra1: -0.03
-    - _Sombra2: -0.5
+    - _Float0: 0
+    - _Frecuency: 4.29
+    - _Glossiness: 0.5
+    - _Height: 3
+    - _Metallic: 0
     - __dirty: 0
     m_Colors:
-    - _Color0: {r: 0.55375576, g: 0.62270504, b: 0.6415094, a: 0}
-    - _Color1: {r: 0.24528295, g: 0.23255599, b: 0.24126393, a: 0}
-    - _Color2: {r: 1, g: 0.0141509175, b: 0.0141509175, a: 0}
-    - _Color3: {r: 0.11196151, g: 0.4130769, b: 0.6415094, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 0.8867924, g: 0.66733783, b: 0.020914912, a: 0}
+    - _Vector0: {r: 27, g: -4.5, b: 15, a: 0}
+    - _VertexPosition: {r: 0, g: 0, b: 0, a: 0}
+    - _epicenter: {r: 27, g: -4.5, b: 15, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
