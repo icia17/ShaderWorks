@@ -21,7 +21,7 @@ Shader "CubeWaveDistortionShader"
 		#pragma surface surf Standard keepalpha addshadow fullforwardshadows vertex:vertexDataFunc 
 		struct Input
 		{
-			float3 worldPos;
+			half filler;
 		};
 
 		uniform float2 _WaveCenter;
@@ -32,8 +32,8 @@ Shader "CubeWaveDistortionShader"
 		void vertexDataFunc( inout appdata_full v, out Input o )
 		{
 			UNITY_INITIALIZE_OUTPUT( Input, o );
-			float3 ase_worldPos = mul( unity_ObjectToWorld, v.vertex );
-			float2 appendResult2 = (float2(ase_worldPos.x , ase_worldPos.z));
+			float3 objToWorld14 = mul( unity_ObjectToWorld, float4( float3( 0,0,0 ), 1 ) ).xyz;
+			float2 appendResult2 = (float2(objToWorld14.x , objToWorld14.z));
 			float mulTime7 = _Time.y * _Velocity2;
 			float temp_output_10_0 = sin( ( ( distance( appendResult2 , _WaveCenter ) * _Frequency2 ) + mulTime7 ) );
 			float4 appendResult12 = (float4(0.0 , ( temp_output_10_0 * _HeightMagnitude2 ) , 0.0 , 0.0));
@@ -43,8 +43,8 @@ Shader "CubeWaveDistortionShader"
 
 		void surf( Input i , inout SurfaceOutputStandard o )
 		{
-			float3 ase_worldPos = i.worldPos;
-			float2 appendResult2 = (float2(ase_worldPos.x , ase_worldPos.z));
+			float3 objToWorld14 = mul( unity_ObjectToWorld, float4( float3( 0,0,0 ), 1 ) ).xyz;
+			float2 appendResult2 = (float2(objToWorld14.x , objToWorld14.z));
 			float mulTime7 = _Time.y * _Velocity2;
 			float temp_output_10_0 = sin( ( ( distance( appendResult2 , _WaveCenter ) * _Frequency2 ) + mulTime7 ) );
 			float3 temp_cast_0 = (temp_output_10_0).xxx;
@@ -59,8 +59,8 @@ Shader "CubeWaveDistortionShader"
 }
 /*ASEBEGIN
 Version=18900
-248.8;73.6;770;463.8;2033.67;495.7303;1.926139;True;False
-Node;AmplifyShaderEditor.WorldPosInputsNode;1;-1415.575,-256.8271;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
+248.8;73.6;734.8;463.8;1894.845;457.983;1.21349;False;False
+Node;AmplifyShaderEditor.TransformPositionNode;14;-1447.945,-260.9153;Inherit;False;Object;World;False;Fast;True;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.DynamicAppendNode;2;-1219.863,-222.1699;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0
 Node;AmplifyShaderEditor.Vector2Node;13;-1249.342,-121.2814;Inherit;False;Property;_WaveCenter;Wave Center;3;0;Create;True;0;0;0;False;0;False;0,0;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.RangedFloatNode;3;-1183.695,105.0499;Inherit;False;Property;_Velocity2;Velocity;0;0;Create;True;0;0;0;False;0;False;1;1;0;10;0;1;FLOAT;0
@@ -74,8 +74,8 @@ Node;AmplifyShaderEditor.SinOpNode;10;-543.8824,-2.462049;Inherit;False;1;0;FLOA
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;11;-345.1202,314.1513;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.DynamicAppendNode;12;-212.3716,289.2555;Inherit;False;FLOAT4;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT4;0
 Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;0,0;Float;False;True;-1;2;ASEMaterialInspector;0;0;Standard;CubeWaveDistortionShader;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Back;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;0;Opaque;0.5;True;True;0;False;Opaque;;Geometry;All;14;all;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;True;0;0;False;-1;0;False;-1;0;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;;-1;-1;-1;-1;0;False;0;0;False;-1;-1;0;False;-1;0;0;0;False;0.1;False;-1;0;False;-1;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
-WireConnection;2;0;1;1
-WireConnection;2;1;1;3
+WireConnection;2;0;14;1
+WireConnection;2;1;14;3
 WireConnection;4;0;2;0
 WireConnection;4;1;13;0
 WireConnection;6;0;4;0
@@ -90,4 +90,4 @@ WireConnection;12;1;11;0
 WireConnection;0;0;10;0
 WireConnection;0;11;12;0
 ASEEND*/
-//CHKSM=418FE42001B1108F99427F0C8D5165FE5ADF2D94
+//CHKSM=CAC86C22138EFDC74854DBD2CB4D9D6E7D773052

@@ -56,7 +56,7 @@ Shader "OneSideWaveDistortionShader"
 }
 /*ASEBEGIN
 Version=18900
-248.8;73.6;770;463.8;2972.506;960.772;3.303295;False;False
+1058.768;73.6;320.4;463.8;3782.474;960.772;3.303295;False;False
 Node;AmplifyShaderEditor.TextureCoordinatesNode;20;-1369.624,-216.0159;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.Vector2Node;19;-1342.225,-89.1156;Inherit;False;Property;_WaveCenterUV;Wave Center UV;3;0;Create;True;0;0;0;False;0;False;0,0;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.RangedFloatNode;5;-1157.888,101.1098;Inherit;False;Property;_Velocity;Velocity;0;0;Create;True;0;0;0;False;0;False;1;1;0;10;0;1;FLOAT;0
@@ -84,4 +84,4 @@ WireConnection;12;1;11;0
 WireConnection;0;0;10;0
 WireConnection;0;11;12;0
 ASEEND*/
-//CHKSM=DFB1C2AB9D741F4E168CF72F1AC24E6DFE055745
+//CHKSM=36FBE0A6051F62EBC5D183D14F5D36E5830E89D7
