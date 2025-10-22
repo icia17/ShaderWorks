@@ -13,7 +13,7 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -25,6 +25,10 @@ Material:
     m_TexEnvs:
     - _BumpMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CameraInputTexture:
+        m_Texture: {fileID: 8400000, guid: ee31f1c5bce789b40a1c6119651c1416, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CameraInputTexture1:
@@ -83,16 +87,20 @@ Material:
     - _ScreenBarSize1: 0.75
     - _ScreenBarsScale1: 250
     - _ScreenBarsSpeed1: 0.1
+    - _ScreenBrightness: 3
+    - _ScreenBrightness1: 0.35
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _VignetteFalloff: 7
     - _VignetteFalloff1: 8
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _GrayscaleLuminance: {r: 0.299, g: 0.587, b: 0.114, a: 0}
     - _GrayscaleLuminance1: {r: 3, g: 3, b: 3, a: 0}
     - _ScreenResolution1: {r: 240, g: 135, b: 0, a: 0}
   m_BuildTextureStacks: []
