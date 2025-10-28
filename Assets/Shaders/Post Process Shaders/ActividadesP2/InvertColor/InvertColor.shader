@@ -115,7 +115,7 @@ Shader "InvertColor"
 }
 /*ASEBEGIN
 Version=18900
-624;73;714;595;584.7857;172.6201;1;True;False
+807;73;728;686;1302.853;367.8341;1.276985;True;False
 Node;AmplifyShaderEditor.TemplateShaderPropertyNode;8;-779.9668,141.3061;Inherit;False;0;0;_MainTex;Shader;False;0;5;SAMPLER2D;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SamplerNode;9;-629.9668,134.3061;Inherit;True;Property;_TextureSample0;Texture Sample 0;0;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.RGBToHSVNode;12;-283.8917,137.8653;Inherit;False;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
@@ -130,4 +130,4 @@ WireConnection;14;1;12;2
 WireConnection;14;2;12;3
 WireConnection;0;0;14;0
 ASEEND*/
-//CHKSM=19A12B761B491E58B913099EF495DF0166DF736A
+//CHKSM=2815985188AF9FAAC0964F7ECB196656A345ADC4

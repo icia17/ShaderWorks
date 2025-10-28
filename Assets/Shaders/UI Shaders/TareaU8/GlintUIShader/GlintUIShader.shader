@@ -154,7 +154,7 @@ Shader "GlintUIShader"
 }
 /*ASEBEGIN
 Version=18900
-275.2;73.6;751.6;463.8;1052.656;58.00048;1.672216;False;False
+673;73;623;686;940.952;243.7837;1.672216;False;False
 Node;AmplifyShaderEditor.SimpleTimeNode;14;-965.9208,665.0475;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0
 Node;AmplifyShaderEditor.Vector2Node;15;-964.1609,538.6477;Inherit;False;Property;_PannerSpeed;Panner Speed;2;0;Create;True;0;0;0;False;0;False;5,0;5,5;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.TextureCoordinatesNode;13;-1009.707,413.0746;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
@@ -179,4 +179,4 @@ WireConnection;20;0;2;0
 WireConnection;20;1;19;0
 WireConnection;0;0;20;0
 ASEEND*/
-//CHKSM=32D78B86F648E1A7DD4EDEFB0E5576D9EE90DD1E
+//CHKSM=2D0AA08037E7EAB11CCE7BDE4C25BFEC48422519
