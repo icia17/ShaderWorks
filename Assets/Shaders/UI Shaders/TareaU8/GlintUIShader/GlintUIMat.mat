@@ -42,6 +42,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _ColorMask: 15
+    - _Float0: 0.35
+    - _GlintDarkLimit: 0.48
     - _Stencil: 0
     - _StencilComp: 8
     - _StencilOp: 0
@@ -50,6 +52,8 @@ Material:
     - _UseUIAlphaClip: 0
     m_Colors:
     - _BlendWeights: {r: 0.6301887, g: 0.6123531, b: 0.6123531, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Color0: {r: 1, g: 1, b: 1, a: 0}
     - _PannerSpeed: {r: 1, g: 0, b: 0, a: 0}
+    - _StepColor: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
