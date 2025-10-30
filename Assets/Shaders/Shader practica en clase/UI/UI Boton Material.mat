@@ -24,7 +24,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Basetexture:
-        m_Texture: {fileID: 2800000, guid: 46594753afac17c4aa69d921041fc9e0, type: 3}
+        m_Texture: {fileID: 2800000, guid: dc095ce8d2086f541bd26c7e3a71ef12, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Basetexture1:
@@ -36,7 +36,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture0:
-        m_Texture: {fileID: 2800000, guid: 46594753afac17c4aa69d921041fc9e0, type: 3}
+        m_Texture: {fileID: 2800000, guid: dc095ce8d2086f541bd26c7e3a71ef12, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture1:
@@ -46,11 +46,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _ColorMask: 15
-    - _ShineIntensity: 2.6
+    - _ShineIntensity: 1.562443
     - _ShineIntensity1: 2
-    - _ShineSpeed: 1.12
+    - _ShineSpeed: 1.3460823
     - _ShineSpeed1: 0.3073213
-    - _ShineWidth: 0.397
+    - _ShineWidth: 0
     - _ShineWidth1: 0.08
     - _Stencil: 0
     - _StencilComp: 8
@@ -60,7 +60,6 @@ Material:
     - _UseUIAlphaClip: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ShineColor: {r: 0.018378438, g: 0.30255058, b: 0.5566038, a: 0}
+    - _ShineColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0.2784314}
     - _ShineColor1: {r: 0.065948695, g: 0.6818225, b: 0.735849, a: 0}
   m_BuildTextureStacks: []
-  m_AllowLocking: 1

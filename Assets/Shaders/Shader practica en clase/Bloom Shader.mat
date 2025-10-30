@@ -36,9 +36,8 @@ Material:
     - _BloomIntensity: 3
     - _BloomThreshold: 0.6
     - _NoiseFrequency: 0.7
-    - _NoiseIntensity: 0.15
-    - _NoiseScale: 0
+    - _NoiseIntensity: 0.3
+    - _NoiseScale: 50.3
     - __dirty: 0
     m_Colors: []
   m_BuildTextureStacks: []
-  m_AllowLocking: 1
