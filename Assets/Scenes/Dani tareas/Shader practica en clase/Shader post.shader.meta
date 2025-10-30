@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 06166689f9d43e0458a16e3600eb34ed
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _texurablancoynegro: {fileID: 2800000, guid: db7291c09b44bc94089b5c277432cca9, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
