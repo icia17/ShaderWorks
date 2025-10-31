@@ -146,12 +146,12 @@ Shader "UILensDistortionShader"
 }
 /*ASEBEGIN
 Version=18900
-561.6;73.6;606;395;1130.57;-93.78745;1;True;False
+584.8;73.6;582.8;395;1130.57;-93.78745;1;False;False
 Node;AmplifyShaderEditor.TextureCoordinatesNode;7;-874.2141,215.0861;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.DistanceOpNode;4;-620.7457,290.1203;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0.5,0.5;False;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;12;-612.0031,411.6438;Inherit;False;Property;_Intensity;Intensity;1;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;11;-438.4324,371.0209;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.TexturePropertyNode;1;-344.1122,-21.00626;Inherit;True;Property;_Texture0;Texture 0;0;0;Create;True;0;0;0;False;0;False;55b1b7c646982a049b43cadc6fe191fa;None;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
+Node;AmplifyShaderEditor.TexturePropertyNode;1;-344.1122,-21.00626;Inherit;True;Property;_Texture0;Texture 0;0;0;Create;True;0;0;0;False;0;False;55b1b7c646982a049b43cadc6fe191fa;55b1b7c646982a049b43cadc6fe191fa;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
 Node;AmplifyShaderEditor.LerpOp;10;-242.2053,213.6218;Inherit;False;3;0;FLOAT2;0,0;False;1;FLOAT2;0.5,0.5;False;2;FLOAT;0;False;1;FLOAT2;0
 Node;AmplifyShaderEditor.SamplerNode;9;-55.19779,-20.2494;Inherit;True;Property;_TextureSample0;Texture Sample 0;1;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;0;282.2496,-14.79041;Float;False;True;-1;2;ASEMaterialInspector;0;4;UILensDistortionShader;5056123faa0c79b47ab6ad7e8bf059a4;True;Default;0;0;Default;2;False;True;2;5;False;-1;10;False;-1;0;1;False;-1;0;False;-1;False;False;False;False;False;False;False;False;False;False;False;False;True;2;False;-1;False;True;True;True;True;True;0;True;-9;False;False;False;False;False;False;False;True;True;0;True;-5;255;True;-8;255;True;-7;0;True;-4;0;True;-6;1;False;-1;1;False;-1;7;False;-1;1;False;-1;1;False;-1;1;False;-1;False;True;2;False;-1;True;0;True;-11;False;True;5;Queue=Transparent=Queue=0;IgnoreProjector=True;RenderType=Transparent=RenderType;PreviewType=Plane;CanUseSpriteAtlas=True;False;0;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;2;0;;0;0;Standard;0;0;1;True;False;;False;0
@@ -164,4 +164,4 @@ WireConnection;9;0;1;0
 WireConnection;9;1;10;0
 WireConnection;0;0;9;0
 ASEEND*/
-//CHKSM=70ABC1D3E74ADFB74A65300EE003C6AB01D86D95
+//CHKSM=EF6FB5BA93B6843F9D2E882DE6EB960F5085089D
