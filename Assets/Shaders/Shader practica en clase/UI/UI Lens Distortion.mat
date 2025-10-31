@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: UI Boton Material
-  m_Shader: {fileID: 4800000, guid: b24a1e3a6c806a244a95721dc005797e, type: 3}
+  m_Name: UI Lens Distortion
+  m_Shader: {fileID: 4800000, guid: 0ab6c9a6d1b65234590c1af4dc922876, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -23,14 +23,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Basetexture:
-        m_Texture: {fileID: 2800000, guid: dc095ce8d2086f541bd26c7e3a71ef12, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Basetexture1:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -39,19 +31,15 @@ Material:
         m_Texture: {fileID: 2800000, guid: dc095ce8d2086f541bd26c7e3a71ef12, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Texture1:
-        m_Texture: {fileID: 2800000, guid: bea7fa376f932ba419f3d1fc95bd1a2b, type: 3}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: dc095ce8d2086f541bd26c7e3a71ef12, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _ColorMask: 15
-    - _ShineIntensity: 1.562443
-    - _ShineIntensity1: 2
-    - _ShineSpeed: 1.3460823
-    - _ShineSpeed1: 0.3073213
-    - _ShineWidth: 0
-    - _ShineWidth1: 0.08
+    - _Distortion: 0.303362
+    - _Power: 2.5
     - _Stencil: 0
     - _StencilComp: 8
     - _StencilOp: 0
@@ -60,6 +48,4 @@ Material:
     - _UseUIAlphaClip: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ShineColor: {r: 0.34905657, g: 0.34905657, b: 0.34905657, a: 0.2784314}
-    - _ShineColor1: {r: 0.065948695, g: 0.6818225, b: 0.735849, a: 0}
   m_BuildTextureStacks: []
