@@ -33,5 +33,5 @@ Material:
     m_Colors:
     - _Color0: {r: 0.082352914, g: 0.27183595, b: 0.83137256, a: 0}
     - _Color1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 0}
-    - _epicenter: {r: 27, g: -4, b: 16, a: 0}
+    - _epicenter: {r: 35.0777, g: 1.728871, b: -54.8495, a: 0}
   m_BuildTextureStacks: []
