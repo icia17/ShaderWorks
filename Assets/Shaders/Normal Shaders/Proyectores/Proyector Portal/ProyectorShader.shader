@@ -123,7 +123,7 @@ Shader "ProyectorShader"
 }
 /*ASEBEGIN
 Version=18900
-930.4;73.6;274.7999;421.4;471.8134;96.81868;1.005185;False;False
+975;73;584;508;732.9731;298.9076;2.162759;True;False
 Node;AmplifyShaderEditor.ScreenPosInputsNode;8;-1103.389,39.35191;Float;False;0;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.DynamicAppendNode;2;-858.7733,18.10106;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0
 Node;AmplifyShaderEditor.Vector2Node;5;-884.1201,131.1327;Inherit;False;Property;_TextureTiling;Texture Tiling;1;0;Create;True;0;0;0;False;0;False;1,1;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
@@ -143,4 +143,4 @@ WireConnection;12;1;13;0
 WireConnection;12;2;9;0
 WireConnection;7;0;12;0
 ASEEND*/
-//CHKSM=3DDACC25F8479ADEDC1BFF1D024EB1DB89FCDE87
+//CHKSM=9D1D278AA8E58CB19DD4B464071950717151B1A4
