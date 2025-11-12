@@ -59,5 +59,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Grupo 03/04 - Stencil Shaders/Scenes/FissureShaderScene.unity
     guid: 0bdf648890de64e4380fffd406beeab9
+  - enabled: 1
+    path: Assets/Grupo 03/05 - Proyector Shaders/Scenes/SeleccionProyectorScene.unity
+    guid: a274de3032dd46f4e9061bb9db7cb220
+  - enabled: 1
+    path: Assets/Grupo 03/05 - Proyector Shaders/Scenes/FollowProyectorScene.unity
+    guid: f91e96437b6eb1a4aa04249dd18c61b9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 6522dae5592a71d4fb217fe4cc08ba13, type: 3}

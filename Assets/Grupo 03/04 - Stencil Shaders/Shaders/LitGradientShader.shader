@@ -53,7 +53,7 @@ Shader "LitGradientShader"
 }
 /*ASEBEGIN
 Version=18900
-748;73;858;604;1400.583;442.4279;1.76991;True;False
+592;73;1076;604;1400.583;442.4279;1.76991;True;False
 Node;AmplifyShaderEditor.TextureCoordinatesNode;19;-911.2234,195.8749;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.TexturePropertyNode;10;-871.338,-222.1704;Inherit;True;Property;_Texture0;Texture 0;1;0;Create;True;0;0;0;False;0;False;None;ceb1bacd3e5dc9b4cb4b85eb1a74cfb6;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
 Node;AmplifyShaderEditor.OneMinusNode;5;-668.6677,209.6235;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
@@ -75,4 +75,4 @@ WireConnection;8;1;6;0
 WireConnection;0;0;8;0
 WireConnection;0;2;11;0
 ASEEND*/
-//CHKSM=B0F60F1C87941FB1EA49FA1F7D07F81C7678924B
+//CHKSM=274E48C28D6F22DEB1DC3B7160F82B0DDFE43A6F
