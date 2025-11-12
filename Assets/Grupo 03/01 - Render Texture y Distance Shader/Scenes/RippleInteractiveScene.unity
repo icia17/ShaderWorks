@@ -874,6 +874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetMaterial: {fileID: 2100000, guid: 159ab4b23594f0948ba1a5dbf751121c, type: 2}
   targetRenderer: {fileID: 8773235532315210256}
+  detectMaterialUsers: 1
   uiContainer: {fileID: 2074443857}
   floatPrefab: {fileID: 3615973755039745297, guid: bceb2e46e9bc6a9439975cc3ac45c665, type: 3}
   sliderPrefab: {fileID: 6607329143170087438, guid: 85726caaadb59a04b8c5ddbdb56386c5, type: 3}
@@ -891,11 +892,6 @@ MonoBehaviour:
     displayName: Frequency
     propertyType: 0
     floatRange: {x: 0, y: 10}
-    isSlider: 1
-  - propertyName: _RippleStartTime
-    displayName: Ripple Start Time
-    propertyType: 0
-    floatRange: {x: 0, y: 3}
     isSlider: 1
   - propertyName: _RippleMaxTime
     displayName: Ripple Max Time

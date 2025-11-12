@@ -67,7 +67,7 @@ Material:
     - _DstBlend: 0
     - _Frequency: 5
     - _Frequency1: 2
-    - _Frequency2: 1
+    - _Frequency2: 50
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1

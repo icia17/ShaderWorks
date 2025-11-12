@@ -151,11 +151,11 @@ Shader "UILensDistortionShader"
 }
 /*ASEBEGIN
 Version=18900
-687;73;829;604;1369.943;-180.5518;1;True;False
+435;73;990;604;866.0668;39.39265;1;False;False
 Node;AmplifyShaderEditor.RangedFloatNode;15;-1107.943,480.5518;Inherit;False;Property;_DistortionCenterX;Distortion Center X;2;0;Create;True;0;0;0;False;0;False;0.5;0.5;0;1;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;16;-1110.943,606.5518;Inherit;False;Property;_DistortionCenterY;Distortion Center Y;3;0;Create;True;0;0;0;False;0;False;0.5;0.5;0;1;0;1;FLOAT;0
-Node;AmplifyShaderEditor.TextureCoordinatesNode;7;-874.2141,215.0861;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.DynamicAppendNode;14;-794.2415,548.6165;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0
+Node;AmplifyShaderEditor.TextureCoordinatesNode;7;-874.2141,215.0861;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.DistanceOpNode;4;-620.7457,290.1203;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0.5,0.5;False;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;12;-612.0031,411.6438;Inherit;False;Property;_Intensity;Intensity;1;0;Create;True;0;0;0;False;0;False;1;-0.75;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;11;-438.4324,371.0209;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
@@ -175,4 +175,4 @@ WireConnection;9;0;1;0
 WireConnection;9;1;10;0
 WireConnection;0;0;9;0
 ASEEND*/
-//CHKSM=C09317AF1F97CACC409B8815E24C74F9F194C125
+//CHKSM=75AD36D9F309A4462E556DB5EFA0F45BAEA53399

@@ -156,32 +156,32 @@ Shader "GlintUIShader"
 }
 /*ASEBEGIN
 Version=18900
-470;73;1046;604;1693.284;-76.32852;1.3;True;False
+435;73;990;604;817.4042;172.359;1.3;False;False
 Node;AmplifyShaderEditor.Vector2Node;29;-1130.914,624.45;Inherit;False;Constant;_X;X;4;0;Create;True;0;0;0;False;0;False;1,0;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.RangedFloatNode;30;-1147.283,533.9286;Inherit;False;Property;_GlintSpeed;GlintSpeed;3;0;Create;True;0;0;0;False;0;False;0;1;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.TexturePropertyNode;1;-768.5285,-12.02762;Inherit;True;Property;_GlintedTex;Glinted Tex;0;0;Create;True;0;0;0;False;0;False;55b1b7c646982a049b43cadc6fe191fa;55b1b7c646982a049b43cadc6fe191fa;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
 Node;AmplifyShaderEditor.SimpleTimeNode;14;-965.9208,665.0475;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0
-Node;AmplifyShaderEditor.TextureCoordinatesNode;13;-1009.707,413.0746;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;28;-933.8135,539.0499;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT2;0,0;False;1;FLOAT2;0
-Node;AmplifyShaderEditor.SamplerNode;2;-476.8712,-12.53713;Inherit;True;Property;_TextureSample0;Texture Sample 0;1;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.TextureCoordinatesNode;13;-1009.707,413.0746;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.TexturePropertyNode;1;-768.5285,-12.02762;Inherit;True;Property;_GlintedTex;Glinted Tex;0;0;Create;True;0;0;0;False;0;False;55b1b7c646982a049b43cadc6fe191fa;55b1b7c646982a049b43cadc6fe191fa;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
 Node;AmplifyShaderEditor.PannerNode;6;-723.0803,412.7861;Inherit;False;3;0;FLOAT2;0,0;False;2;FLOAT2;5,5;False;1;FLOAT;1;False;1;FLOAT2;0
-Node;AmplifyShaderEditor.TexturePropertyNode;7;-766.8113,198.1986;Inherit;True;Property;_GlintTex;Glint Tex;1;0;Create;True;0;0;0;False;0;False;4ab033c7583e3d5469c8a496c8d032fa;4ab033c7583e3d5469c8a496c8d032fa;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
 Node;AmplifyShaderEditor.RangedFloatNode;27;-304.61,446.2028;Inherit;False;Property;_GlintDarkLimit;Glint Dark Limit;2;0;Create;True;0;0;0;False;0;False;0;0.41;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.SamplerNode;9;-475.2003,198.6304;Inherit;True;Property;_TextureSample1;Texture Sample 1;2;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.TexturePropertyNode;7;-766.8113,198.1986;Inherit;True;Property;_GlintTex;Glint Tex;1;0;Create;True;0;0;0;False;0;False;4ab033c7583e3d5469c8a496c8d032fa;4ab033c7583e3d5469c8a496c8d032fa;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
+Node;AmplifyShaderEditor.SamplerNode;2;-476.8712,-12.53713;Inherit;True;Property;_TextureSample0;Texture Sample 0;1;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.StepOpNode;22;-121.8807,385.0006;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0.0754717;False;1;FLOAT;0
+Node;AmplifyShaderEditor.SamplerNode;9;-475.2003,199.9304;Inherit;True;Property;_TextureSample1;Texture Sample 1;2;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;19;41.83202,176.9216;Inherit;False;4;4;0;FLOAT;0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;COLOR;0
 Node;AmplifyShaderEditor.SimpleAddOpNode;20;138.2288,-2.999434;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;0;299.8584,-2.703566;Float;False;True;-1;2;ASEMaterialInspector;0;4;GlintUIShader;5056123faa0c79b47ab6ad7e8bf059a4;True;Default;0;0;Default;2;False;True;2;5;False;-1;10;False;-1;0;1;False;-1;0;False;-1;False;False;False;False;False;False;False;False;False;False;False;False;True;2;False;-1;False;True;True;True;True;True;0;True;-9;False;False;False;False;False;False;False;True;True;0;True;-5;255;True;-8;255;True;-7;0;True;-4;0;True;-6;1;False;-1;1;False;-1;7;False;-1;1;False;-1;1;False;-1;1;False;-1;False;True;2;False;-1;True;0;True;-11;False;True;5;Queue=Transparent=Queue=0;IgnoreProjector=True;RenderType=Transparent=RenderType;PreviewType=Plane;CanUseSpriteAtlas=True;False;0;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;2;0;;0;0;Standard;0;0;1;True;False;;False;0
 WireConnection;28;0;30;0
 WireConnection;28;1;29;0
-WireConnection;2;0;1;0
 WireConnection;6;0;13;0
 WireConnection;6;2;28;0
 WireConnection;6;1;14;0
-WireConnection;9;0;7;0
-WireConnection;9;1;6;0
+WireConnection;2;0;1;0
 WireConnection;22;0;2;1
 WireConnection;22;1;27;0
+WireConnection;9;0;7;0
+WireConnection;9;1;6;0
 WireConnection;19;0;2;4
 WireConnection;19;1;9;0
 WireConnection;19;2;9;4
@@ -190,4 +190,4 @@ WireConnection;20;0;2;0
 WireConnection;20;1;19;0
 WireConnection;0;0;20;0
 ASEEND*/
-//CHKSM=32FD26A68226AF76B2FC64644FDD11E8CD9716A1
+//CHKSM=C3BEEF07B66E93A6D2A41315E855089CA38A87E4

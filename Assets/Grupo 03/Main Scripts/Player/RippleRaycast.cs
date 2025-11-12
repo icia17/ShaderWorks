@@ -15,7 +15,6 @@ public class RippleRaycast : MonoBehaviour
 
     void ShootRaycast()
     {
-        // Crear el ray desde el centro de la cámara
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
         RaycastHit hit;
 
@@ -23,18 +22,16 @@ public class RippleRaycast : MonoBehaviour
         {
             if (hit.collider.CompareTag("RippleShader"))
             {
-                // Obtener el material del objeto impactado
                 Renderer renderer = hit.collider.GetComponent<Renderer>();
 
-                if (renderer != null && renderer.material != null)
+                if (renderer != null && renderer.sharedMaterial != null)
                 {
-                    Material hitMaterial = renderer.material;
+                    // Use sharedMaterial to access the existing instance
+                    Material hitMaterial = renderer.sharedMaterial;
 
-                    // Enviar punto de impacto y tiempo al shader
                     hitMaterial.SetVector("_RippleCenter", hit.point);
                     hitMaterial.SetFloat("_RippleStartTime", Time.time);
 
-                    // Debug visual (opcional)
                     Debug.DrawLine(ray.origin, hit.point, Color.cyan, 1f);
                 }
                 else

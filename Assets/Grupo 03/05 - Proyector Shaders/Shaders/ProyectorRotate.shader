@@ -123,7 +123,7 @@ Shader "ProyectorRotate"
 }
 /*ASEBEGIN
 Version=18900
-375;73;1155;604;1641.584;169.7425;1.166957;True;False
+300;73;1125;604;682.5418;275.8028;1;False;False
 Node;AmplifyShaderEditor.UnityProjectorMatrixNode;1;-1639.443,-12.80043;Inherit;False;0;1;FLOAT4x4;0
 Node;AmplifyShaderEditor.PosVertexDataNode;2;-1674.824,64.45134;Inherit;False;1;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;3;-1449.224,-6.748641;Inherit;False;2;2;0;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT4;0,0,0,0;False;1;FLOAT4;0
@@ -159,4 +159,4 @@ WireConnection;11;1;10;4
 WireConnection;11;2;13;0
 WireConnection;0;0;11;0
 ASEEND*/
-//CHKSM=A72485B6FFD7A81E6046C8B33E3A68A5E12BB122
+//CHKSM=1CC27FC6EC3737E29E51CD63ADA2C71C2D56FF1B

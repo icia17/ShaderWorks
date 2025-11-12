@@ -181,7 +181,7 @@ Shader "UIRotationShader"
 }
 /*ASEBEGIN
 Version=18900
-687;73;829;604;1424.815;-65.62305;1.351972;True;False
+440;73;985;604;1204.46;512.9075;1.586436;True;False
 Node;AmplifyShaderEditor.TexturePropertyNode;2;-1126.501,-433.9683;Inherit;True;Property;_BaseTex;Base Tex;12;0;Create;True;0;0;0;False;0;False;80ab37a9e4f49c842903bb43bdd7bcd2;80ab37a9e4f49c842903bb43bdd7bcd2;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
 Node;AmplifyShaderEditor.RangedFloatNode;8;-957.1486,560.5465;Inherit;False;Property;_RotationSpeed;Rotation Speed;7;0;Create;True;0;0;0;False;0;False;0.25;0.25;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;13;-1045.672,465.381;Inherit;False;Property;_RotationScaleY;RotationScaleY;9;0;Create;True;0;0;0;False;0;False;0;5;0;5;0;1;FLOAT;0
@@ -205,4 +205,4 @@ WireConnection;1;57;11;0
 WireConnection;1;40;9;0
 WireConnection;0;0;1;0
 ASEEND*/
-//CHKSM=DE56DA69BD2D7E6E734829D3DE365EA86B36C779
+//CHKSM=5AA813FA9740C239FB66982E241B04008133E92E

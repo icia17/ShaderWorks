@@ -56,9 +56,9 @@ Shader "OneSideWaveDistortionShader"
 }
 /*ASEBEGIN
 Version=18900
-414;73;685;604;1451.423;407.7638;1.611484;True;False
+857;73;568;604;992.2488;640.9866;1.977187;False;False
 Node;AmplifyShaderEditor.TextureCoordinatesNode;20;-1369.624,-216.0159;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.Vector2Node;19;-1342.225,-89.1156;Inherit;False;Property;_WaveCenterUV;Wave Center UV;3;0;Create;True;0;0;0;False;0;False;0,0;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
+Node;AmplifyShaderEditor.Vector2Node;19;-1342.225,-90.4156;Inherit;False;Property;_WaveCenterUV;Wave Center UV;3;0;Create;True;0;0;0;False;0;False;0,0;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.DistanceOpNode;4;-1010.063,-108.146;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;3;-1158.762,0.0716157;Inherit;False;Property;_Frequency;Frequency;1;0;Create;True;0;0;0;False;0;False;1;20;0;50;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;5;-1157.888,101.1098;Inherit;False;Property;_Velocity;Velocity;0;0;Create;True;0;0;0;False;0;False;1;2;0;10;0;1;FLOAT;0
@@ -84,4 +84,4 @@ WireConnection;12;1;11;0
 WireConnection;0;0;10;0
 WireConnection;0;11;12;0
 ASEEND*/
-//CHKSM=DFC26525E8331CF69EDDA0011F8D048D0D502FA1
+//CHKSM=EF22C013F58AE99B3CE74F284A5DC0CE393A3011
