@@ -57,7 +57,7 @@ Shader "WaveDistortionShader"
 }
 /*ASEBEGIN
 Version=18900
-558;73;858;604;1933.225;572.3241;2.157011;True;False
+1284;73;322;604;1355.146;572.3241;2.157011;False;False
 Node;AmplifyShaderEditor.WorldPosInputsNode;13;-1397.382,-110.1056;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.DynamicAppendNode;14;-1201.67,-75.44828;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0
 Node;AmplifyShaderEditor.DistanceOpNode;4;-1044.077,-75.08438;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT;0
@@ -90,4 +90,4 @@ WireConnection;15;1;11;0
 WireConnection;0;0;15;0
 WireConnection;0;11;12;0
 ASEEND*/
-//CHKSM=7CC35F742316A09DADE1D430C6C5E0E846C106B1
+//CHKSM=97A3ABC7D29D8F9E31C967E814E573CCCAA26223
