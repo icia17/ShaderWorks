@@ -6,19 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/La Isla.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Grupo 03/01 - Render Texture y Distance Shader/Scenes/SecurityCameraScene.unity
+    guid: 5e893a7a37a714e439cfcc62825d3775
   - enabled: 1
-    path: Assets/Scenes/FresnelShader.unity
-    guid: 5b1ddf85a8f4da443b4caa108fc64c63
+    path: Assets/Grupo 03/01 - Render Texture y Distance Shader/Scenes/WaveDistortionScene.unity
+    guid: e4f8f13cc94320641aa303343b058411
   - enabled: 1
-    path: Assets/Scenes/HeightMap.unity
-    guid: 767a465ae9dfc11479c86aed74045501
+    path: Assets/Grupo 03/01 - Render Texture y Distance Shader/Scenes/OneSideWaveDistortionScene.unity
+    guid: 8d290811e2a0f2e4ba146bcae725656a
   - enabled: 1
-    path: Assets/Scenes/ToonShader.unity
-    guid: f696a42c8f6811b409141b80bbe68505
+    path: Assets/Grupo 03/01 - Render Texture y Distance Shader/Scenes/CubeWaveDistortionScene.unity
+    guid: 2ceec59bbf216cf4081f8c2351e8d32f
   - enabled: 1
-    path: Assets/Scenes/UVShader.unity
-    guid: 1a3733a95060c28489528562162142bf
+    path: Assets/Grupo 03/01 - Render Texture y Distance Shader/Scenes/RippleInteractiveScene.unity
+    guid: 90f2a9d15e964ec42849bebe1754ec0f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 6522dae5592a71d4fb217fe4cc08ba13, type: 3}

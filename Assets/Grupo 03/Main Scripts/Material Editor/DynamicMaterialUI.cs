@@ -8,7 +8,7 @@ public class DynamicMaterialUI : MonoBehaviour
 {
     [Header("Target Material")]
     public Material targetMaterial;
-    public Renderer targetRenderer; // Optional: for material instances
+    public Renderer targetRenderer; // Optional: for single material instance
     
     [Header("UI Setup")]
     public Transform uiContainer;
@@ -23,6 +23,7 @@ public class DynamicMaterialUI : MonoBehaviour
     public List<MaterialPropertyData> materialProperties = new List<MaterialPropertyData>();
     
     private Material materialInstance;
+    private List<Renderer> affectedRenderers = new List<Renderer>();
     private Dictionary<string, GameObject> propertyUIElements = new Dictionary<string, GameObject>();
     
     void Start()
@@ -33,15 +34,58 @@ public class DynamicMaterialUI : MonoBehaviour
     
     void SetupMaterialInstance()
     {
+        affectedRenderers.Clear();
+        
         if (targetRenderer != null)
         {
-            // Create material instance for this specific object
+            // Single renderer mode - create material instance for this specific object
             materialInstance = targetRenderer.material;
+            affectedRenderers.Add(targetRenderer);
         }
         else if (targetMaterial != null)
         {
-            // Create instance of the original material
-            materialInstance = new Material(targetMaterial);
+            // Find all renderers using the target material
+            Renderer[] allRenderers = FindObjectsOfType<Renderer>();
+            
+            foreach (Renderer renderer in allRenderers)
+            {
+                // Check if any of the renderer's materials match the target material
+                foreach (Material mat in renderer.sharedMaterials)
+                {
+                    if (mat == targetMaterial)
+                    {
+                        affectedRenderers.Add(renderer);
+                        break;
+                    }
+                }
+            }
+            
+            if (affectedRenderers.Count > 0)
+            {
+                // Create a shared material instance
+                materialInstance = new Material(targetMaterial);
+                
+                // Apply the instance to all affected renderers
+                foreach (Renderer renderer in affectedRenderers)
+                {
+                    Material[] materials = renderer.materials;
+                    for (int i = 0; i < materials.Length; i++)
+                    {
+                        if (materials[i].name.Replace(" (Instance)", "") == targetMaterial.name)
+                        {
+                            materials[i] = materialInstance;
+                        }
+                    }
+                    renderer.materials = materials;
+                }
+                
+                Debug.Log($"Found and updated {affectedRenderers.Count} renderer(s) using {targetMaterial.name}");
+            }
+            else
+            {
+                Debug.LogWarning($"No renderers found using material: {targetMaterial.name}");
+                materialInstance = new Material(targetMaterial);
+            }
         }
         else
         {
@@ -340,5 +384,17 @@ public class DynamicMaterialUI : MonoBehaviour
         
         materialProperties.Add(newProp);
         CreateUIForProperty(newProp);
+    }
+    
+    // Get the number of affected renderers
+    public int GetAffectedRendererCount()
+    {
+        return affectedRenderers.Count;
+    }
+    
+    // Get list of affected renderers
+    public List<Renderer> GetAffectedRenderers()
+    {
+        return new List<Renderer>(affectedRenderers);
     }
 }
