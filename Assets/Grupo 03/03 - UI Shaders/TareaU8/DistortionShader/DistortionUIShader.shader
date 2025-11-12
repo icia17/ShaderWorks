@@ -162,15 +162,15 @@ Shader "DistortionUIShader"
 }
 /*ASEBEGIN
 Version=18900
-815;73;802;570;1465.64;140.4323;1.36141;True;False
-Node;AmplifyShaderEditor.RangedFloatNode;19;-1141.681,410.4494;Inherit;False;Property;_SineDistortionSpeed;Sine Distortion Speed;8;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0
+687;73;829;604;1782.299;250.8964;1.804088;True;False
+Node;AmplifyShaderEditor.RangedFloatNode;19;-1141.681,408.6453;Inherit;False;Property;_SineDistortionSpeed;Sine Distortion Speed;8;0;Create;True;0;0;0;False;0;False;1;1.5;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleTimeNode;15;-917.0031,412.2402;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SinOpNode;17;-725.3207,397.5524;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;1;-899.0919,489.0831;Inherit;False;Property;_SineDistortionAmount;Sine Distortion Amount;10;0;Create;True;0;0;0;False;0;False;0.3;0.3;0;1;0;1;FLOAT;0
-Node;AmplifyShaderEditor.TexturePropertyNode;3;-685.1617,197.3029;Inherit;True;Property;_DistortionNormalTex;Distortion Normal Tex;11;0;Create;True;0;0;0;False;0;False;d710ce45bb70a4341bf82edae6bf7596;None;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
+Node;AmplifyShaderEditor.RangedFloatNode;1;-899.0919,489.0831;Inherit;False;Property;_SineDistortionAmount;Sine Distortion Amount;10;0;Create;True;0;0;0;False;0;False;0.3;0.2;0;1;0;1;FLOAT;0
+Node;AmplifyShaderEditor.TexturePropertyNode;3;-685.1617,197.3029;Inherit;True;Property;_DistortionNormalTex;Distortion Normal Tex;11;0;Create;True;0;0;0;False;0;False;d710ce45bb70a4341bf82edae6bf7596;d710ce45bb70a4341bf82edae6bf7596;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;18;-591.4207,432.6525;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.TexturePropertyNode;2;-684.7382,-151.0945;Inherit;True;Property;_DistortionTex;Distortion Tex;9;0;Create;True;0;0;0;False;0;False;36be8d528a4fa024faa4680d7658642c;36be8d528a4fa024faa4680d7658642c;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
-Node;AmplifyShaderEditor.Vector2Node;28;-606.9023,56.27639;Inherit;False;Property;_BGSpeed;BG Speed;7;0;Create;True;0;0;0;False;0;False;10,0;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
+Node;AmplifyShaderEditor.Vector2Node;28;-606.9023,56.27639;Inherit;False;Property;_BGSpeed;BG Speed;7;0;Create;True;0;0;0;False;0;False;10,0;0.5,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.FunctionNode;4;-321.8773,1.938553;Inherit;False;UI-Sprite Effect Layer;0;;2;789bf62641c5cfe4ab7126850acc22b8;18,74,0,204,0,191,0,225,0,242,0,237,0,249,0,186,0,177,1,182,0,229,0,92,0,98,0,234,0,126,0,129,1,130,0,31,0;18;192;COLOR;1,1,1,1;False;39;COLOR;1,1,1,1;False;37;SAMPLER2D;;False;218;FLOAT2;0,0;False;239;FLOAT2;0,0;False;181;FLOAT2;0,0;False;75;SAMPLER2D;;False;80;FLOAT;1;False;183;FLOAT2;0,0;False;188;SAMPLER2D;;False;33;SAMPLER2D;;False;248;FLOAT2;0,0;False;233;SAMPLER2D;;False;101;SAMPLER2D;;False;57;FLOAT4;0,0,0,0;False;40;FLOAT;0;False;231;FLOAT;1;False;30;FLOAT;1;False;2;COLOR;0;FLOAT2;172
 Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;0;0,0;Float;False;True;-1;2;ASEMaterialInspector;0;4;DistortionUIShader;5056123faa0c79b47ab6ad7e8bf059a4;True;Default;0;0;Default;2;False;True;2;5;False;-1;10;False;-1;0;1;False;-1;0;False;-1;False;False;False;False;False;False;False;False;False;False;False;False;True;2;False;-1;False;True;True;True;True;True;0;True;-9;False;False;False;False;False;False;False;True;True;0;True;-5;255;True;-8;255;True;-7;0;True;-4;0;True;-6;1;False;-1;1;False;-1;7;False;-1;1;False;-1;1;False;-1;1;False;-1;False;True;2;False;-1;True;0;True;-11;False;True;5;Queue=Transparent=Queue=0;IgnoreProjector=True;RenderType=Transparent=RenderType;PreviewType=Plane;CanUseSpriteAtlas=True;False;0;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;2;0;;0;0;Standard;0;0;1;True;False;;False;0
 WireConnection;15;0;19;0
@@ -183,4 +183,4 @@ WireConnection;4;75;3;0
 WireConnection;4;80;18;0
 WireConnection;0;0;4;0
 ASEEND*/
-//CHKSM=7433BAD3B4A45E3EDDD1EE64A0089C17C844F738
+//CHKSM=C1C95E9683E67E2F11E7D4EB3B6FC9DF7C999BC2

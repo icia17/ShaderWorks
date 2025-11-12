@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4fe88b89e2c54a4380255c29d130be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMaterial: {fileID: 2100000, guid: 7613c1e891537ec479fb225701b4a22c, type: 2}
+  targetMaterial: {fileID: 2100000, guid: 709b138fc3251334eb0c9ed1be4b12c5, type: 2}
   targetRenderer: {fileID: 0}
   detectMaterialUsers: 1
   uiContainer: {fileID: 162578474}
@@ -222,13 +222,18 @@ MonoBehaviour:
   vector4Prefab: {fileID: 7476168809612358216, guid: a569996589f28804aa68f70b7d91273b, type: 3}
   texturePrefab: {fileID: 6649052382039056160, guid: 044176077dc1bf9449c2fc036a772757, type: 3}
   materialProperties:
-  - propertyName: _GlintSpeed
-    displayName: Glint Speed
+  - propertyName: _BGSpeed
+    displayName: Background Speed
+    propertyType: 1
+    floatRange: {x: 0, y: 0}
+    isSlider: 0
+  - propertyName: _SineDistortionSpeed
+    displayName: Sine Distortion Speed
     propertyType: 0
-    floatRange: {x: -10, y: 10}
+    floatRange: {x: 0, y: 10}
     isSlider: 1
-  - propertyName: _GlintDarkLimit
-    displayName: Glint Darkness Limit
+  - propertyName: _SineDistortionAmount
+    displayName: Sine Distortion Amount
     propertyType: 0
     floatRange: {x: 0, y: 1}
     isSlider: 1
@@ -1022,7 +1027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91a83bf84e9434b89044ace40d05ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _material: {fileID: 2100000, guid: 709b138fc3251334eb0c9ed1be4b12c5, type: 2}
+  _material: {fileID: 0}
 --- !u!1 &1930298445
 GameObject:
   m_ObjectHideFlags: 0
