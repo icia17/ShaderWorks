@@ -344,7 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4fe88b89e2c54a4380255c29d130be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMaterial: {fileID: 2100000, guid: 1d2ec1d6266a52c4db3c91afae208667, type: 2}
+  targetMaterial: {fileID: 2100000, guid: 85f80848695134a479bbab22d987f4bc, type: 2}
   targetRenderer: {fileID: 0}
   detectMaterialUsers: 1
   uiContainer: {fileID: 1183849670}
@@ -355,25 +355,15 @@ MonoBehaviour:
   vector4Prefab: {fileID: 7476168809612358216, guid: a569996589f28804aa68f70b7d91273b, type: 3}
   texturePrefab: {fileID: 6649052382039056160, guid: 044176077dc1bf9449c2fc036a772757, type: 3}
   materialProperties:
-  - propertyName: _GrayscaleLuminance
-    displayName: Grayscale Luminance
-    propertyType: 2
+  - propertyName: _ScreenResolution
+    displayName: Screen Resolution
+    propertyType: 1
     floatRange: {x: 0, y: 0}
     isSlider: 0
-  - propertyName: _VignetteFalloff
-    displayName: Vignette Falloff
-    propertyType: 0
-    floatRange: {x: 1, y: 15}
-    isSlider: 1
-  - propertyName: _VignetteSharpness
-    displayName: Vignette Sharpness
-    propertyType: 0
-    floatRange: {x: 0, y: 0}
-    isSlider: 0
-  - propertyName: _ScreenBrightness
+  - propertyName: _ScreenBrightness1
     displayName: Screen Brightness
     propertyType: 0
-    floatRange: {x: 0.5, y: 10}
+    floatRange: {x: 0.25, y: 5}
     isSlider: 1
 --- !u!4 &649011585
 Transform:
@@ -740,7 +730,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TU7 - B/W Vignette PP Shader
+  m_text: TU7 - Invert and Pixelate PP Shader
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1503,7 +1493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ee61e50e6a7ef45ae7907c2d13f043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _material: {fileID: 2100000, guid: 1d2ec1d6266a52c4db3c91afae208667, type: 2}
+  _material: {fileID: 2100000, guid: 85f80848695134a479bbab22d987f4bc, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

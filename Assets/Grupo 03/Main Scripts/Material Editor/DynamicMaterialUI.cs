@@ -10,6 +10,10 @@ public class DynamicMaterialUI : MonoBehaviour
     public Material targetMaterial;
     public Renderer targetRenderer; // Optional: for single material instance
     
+    [Header("Detection Options")]
+    [Tooltip("If enabled, will detect post-process and other IMaterialUser components")]
+    public bool detectMaterialUsers = true;
+    
     [Header("UI Setup")]
     public Transform uiContainer;
     public GameObject floatPrefab;
@@ -24,6 +28,7 @@ public class DynamicMaterialUI : MonoBehaviour
     
     private Material materialInstance;
     private List<Renderer> affectedRenderers = new List<Renderer>();
+    private List<IMaterialUser> affectedMaterialUsers = new List<IMaterialUser>();
     private Dictionary<string, GameObject> propertyUIElements = new Dictionary<string, GameObject>();
     
     void Start()
@@ -35,21 +40,74 @@ public class DynamicMaterialUI : MonoBehaviour
     void SetupMaterialInstance()
     {
         affectedRenderers.Clear();
+        affectedMaterialUsers.Clear();
         
+        // Priority 1: Check for IMaterialUser components (post-process, custom material users)
+        if (detectMaterialUsers && targetMaterial != null)
+        {
+            IMaterialUser[] materialUsers = FindObjectsOfType<MonoBehaviour>() as IMaterialUser[];
+            
+            // Better approach: find all MonoBehaviours and check if they implement IMaterialUser
+            MonoBehaviour[] allMonoBehaviours = FindObjectsOfType<MonoBehaviour>();
+            
+            foreach (MonoBehaviour mono in allMonoBehaviours)
+            {
+                if (mono is IMaterialUser materialUser)
+                {
+                    Material userMaterial = materialUser.GetMaterial();
+                    
+                    if (userMaterial == targetMaterial)
+                    {
+                        affectedMaterialUsers.Add(materialUser);
+                        materialInstance = userMaterial;
+                        Debug.Log($"Found material user: {materialUser.GetIdentifier()}");
+                    }
+                }
+            }
+            
+            // If we found material users, use the first one's material instance
+            if (affectedMaterialUsers.Count > 0)
+            {
+                // Always work on a runtime clone so we don’t alter the asset
+                IMaterialUser user = affectedMaterialUsers[0];
+                Material original = user.GetMaterial();
+
+                if (original != null)
+                {
+                    materialInstance = new Material(original);
+                    user.SetMaterial(materialInstance);
+
+                    Debug.Log($"Using cloned runtime material for {user.GetIdentifier()}");
+                }
+                else
+                {
+                    Debug.LogWarning($"Material user {user.GetIdentifier()} has no material assigned!");
+                }
+
+                return;
+            }
+        }
+        
+        // Priority 2: Single renderer mode
         if (targetRenderer != null)
         {
-            // Single renderer mode - create material instance for this specific object
-            materialInstance = targetRenderer.material;
+            // Clone the renderer’s shared material so we don’t modify the asset
+            materialInstance = new Material(targetRenderer.sharedMaterial);
+            targetRenderer.material = materialInstance;
+
             affectedRenderers.Add(targetRenderer);
+            Debug.Log($"Using cloned material instance for single renderer: {targetRenderer.gameObject.name}");
+            return;
         }
-        else if (targetMaterial != null)
+
+        
+        // Priority 3: Find all renderers using the target material
+        if (targetMaterial != null)
         {
-            // Find all renderers using the target material
             Renderer[] allRenderers = FindObjectsOfType<Renderer>();
             
             foreach (Renderer renderer in allRenderers)
             {
-                // Check if any of the renderer's materials match the target material
                 foreach (Material mat in renderer.sharedMaterials)
                 {
                     if (mat == targetMaterial)
@@ -83,14 +141,13 @@ public class DynamicMaterialUI : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning($"No renderers found using material: {targetMaterial.name}");
+                Debug.LogWarning($"No renderers or material users found using material: {targetMaterial.name}");
                 materialInstance = new Material(targetMaterial);
             }
         }
         else
         {
             Debug.LogError("No material or renderer assigned!");
-            return;
         }
     }
     
@@ -386,6 +443,12 @@ public class DynamicMaterialUI : MonoBehaviour
         CreateUIForProperty(newProp);
     }
     
+    // Get the total number of affected objects (renderers + material users)
+    public int GetTotalAffectedCount()
+    {
+        return affectedRenderers.Count + affectedMaterialUsers.Count;
+    }
+    
     // Get the number of affected renderers
     public int GetAffectedRendererCount()
     {
@@ -396,5 +459,36 @@ public class DynamicMaterialUI : MonoBehaviour
     public List<Renderer> GetAffectedRenderers()
     {
         return new List<Renderer>(affectedRenderers);
+    }
+    
+    // Get the number of affected material users (post-process, etc)
+    public int GetAffectedMaterialUserCount()
+    {
+        return affectedMaterialUsers.Count;
+    }
+    
+    // Get list of affected material users
+    public List<IMaterialUser> GetAffectedMaterialUsers()
+    {
+        return new List<IMaterialUser>(affectedMaterialUsers);
+    }
+    
+    // Get debug info about what's being controlled
+    public string GetDebugInfo()
+    {
+        string info = $"Controlling Material: {(materialInstance != null ? materialInstance.name : "None")}\n";
+        info += $"Affected Renderers: {affectedRenderers.Count}\n";
+        info += $"Affected Material Users: {affectedMaterialUsers.Count}\n";
+        
+        if (affectedMaterialUsers.Count > 0)
+        {
+            info += "Material Users:\n";
+            foreach (var user in affectedMaterialUsers)
+            {
+                info += $"  - {user.GetIdentifier()}\n";
+            }
+        }
+        
+        return info;
     }
 }

@@ -13,7 +13,7 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 0
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -87,7 +87,7 @@ Material:
     - _ScreenBarSize1: 1
     - _ScreenBarsScale1: 250
     - _ScreenBarsSpeed1: 0.1
-    - _ScreenBrightness1: 0
+    - _ScreenBrightness1: 1.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -99,6 +99,6 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GrayscaleLuminance1: {r: 0.299, g: 0.587, b: 0.114, a: 0}
-    - _ScreenResolution: {r: 240, g: 135, b: 0, a: 0}
+    - _ScreenResolution: {r: 540, g: 540, b: 0, a: 0}
     - _ScreenResolution1: {r: 240, g: 135, b: 0, a: 0}
   m_BuildTextureStacks: []

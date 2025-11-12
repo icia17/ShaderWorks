@@ -20,5 +20,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Grupo 03/01 - Render Texture y Distance Shader/Scenes/RippleInteractiveScene.unity
     guid: 90f2a9d15e964ec42849bebe1754ec0f
+  - enabled: 1
+    path: Assets/Grupo 03/02 - Post-Process Shaders/Scenes/BlackWhitePPScene.unity
+    guid: 2d609807ddb6aeb44a7dd94f30813b7b
+  - enabled: 1
+    path: Assets/Grupo 03/02 - Post-Process Shaders/Scenes/BloomAndNoisePPScene.unity
+    guid: 6eaed955e6f69a94e8c004a6654b0ba1
+  - enabled: 1
+    path: Assets/Grupo 03/02 - Post-Process Shaders/Scenes/InvertAndPixelatePPScene.unity
+    guid: c9a5906352e20c54b9b40a861cd86d7d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 6522dae5592a71d4fb217fe4cc08ba13, type: 3}
