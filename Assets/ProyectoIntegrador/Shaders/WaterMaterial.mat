@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WaterMaterial
+  m_Shader: {fileID: 4800000, guid: c2c26ccbffe161749aafe6216174899d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Texture0:
+        m_Texture: {fileID: 2800000, guid: 2318775c5cee59b40bacb79fa5fd4571, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WaterNoiseTexture:
+        m_Texture: {fileID: 2800000, guid: 23602af1a02907c4a997741e2cd21321, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WaterNormalTexture:
+        m_Texture: {fileID: 2800000, guid: 24c6819a01b88be4b9931b96a3b8c48b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _DistortionWeight: 0.375
+    - _FoamDistance: 0.73
+    - _FoamStregth: 0
+    - _FresnelStrength: 1
+    - _WaterHeight: 0.6
+    - _WaterHeightspeed: 0.6
+    - _WaterOffsetY: 2.5
+    - _WaterOpacity: 0.95
+    - _WaterSmoothness: 0.545
+    - _WaterVoronoiScale: 20.8
+    - _WaveSpeed: 0.3
+    - __dirty: 0
+    m_Colors:
+    - _DarkLightWater: {r: 0.5, g: 0.88, b: 0, a: 0}
+    - _TextureTIlling: {r: 6, g: 6, b: 0, a: 0}
+    - _WaterColor: {r: 0, g: 0.6418293, b: 0.8773585, a: 0}
+    - _WaveDirection: {r: -1, g: 0, b: -0.05, a: 0}
+  m_BuildTextureStacks: []
