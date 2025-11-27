@@ -1,10 +1,5 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Gestor singleton que coordina la espuma dinámica en el agua
-/// Implementa el patrón Singleton para acceso global
-/// </summary>
 public class WaterFoamManager : MonoBehaviour
 {
     #region Singleton
@@ -29,27 +24,33 @@ public class WaterFoamManager : MonoBehaviour
     #endregion
 
     [Header("Water Settings")]
-    [Tooltip("Material del agua que recibirá las posiciones de espuma")]
     [SerializeField] private Material waterMaterial;
     
+    [Header("Foam Source")]
+    [SerializeField] private Transform foamSource;
+    [SerializeField] private float foamRadius = 3f;
+    [SerializeField] private float heightOffset = 0f;
+    
+    [Header("Divine Glow")]
+    [SerializeField] private bool enableGlow = true;
+    [SerializeField] private float glowRadius = 5f;
+    [SerializeField] private float glowIntensity = 1f;
+    
     [Header("Update Settings")]
-    [Tooltip("Frecuencia de actualización del shader (menor = más FPS)")]
-    [SerializeField] private float updateInterval = 0.1f;
+    [SerializeField] private float updateInterval = 0.05f;
     
-    // Lista de generadores de espuma registrados
-    private List<IFoamGenerator> foamGenerators = new List<IFoamGenerator>();
-    
-    // Control de tiempo para optimización
     private float lastUpdateTime;
     
-    // Nombres de propiedades del shader (optimización)
-    private static readonly int FoamObjectPos = Shader.PropertyToID("_FoamObjectPos");
+    // Shader properties
+    private static readonly int FoamCenter = Shader.PropertyToID("_FoamCenter");
     private static readonly int FoamRadius = Shader.PropertyToID("_FoamRadius");
+    private static readonly int GlowCenter = Shader.PropertyToID("_GlowCenter");
+    private static readonly int GlowRadius = Shader.PropertyToID("_GlowRadius");
+    private static readonly int GlowIntensity = Shader.PropertyToID("_GlowIntensity");
 
     #region Unity Lifecycle
     private void Awake()
     {
-        // Patrón Singleton: asegurar una sola instancia
         if (_instance != null && _instance != this)
         {
             Destroy(gameObject);
@@ -63,11 +64,20 @@ public class WaterFoamManager : MonoBehaviour
     private void Start()
     {
         ValidateWaterMaterial();
+        
+        if (foamSource == null)
+        {
+            GameObject boat = GameObject.FindGameObjectWithTag("Player");
+            if (boat != null)
+            {
+                foamSource = boat.transform;
+                Debug.Log("Foam/Glow source encontrado");
+            }
+        }
     }
 
     private void Update()
     {
-        // Optimización: actualizar solo cada X segundos
         if (Time.time - lastUpdateTime >= updateInterval)
         {
             UpdateWaterShader();
@@ -78,83 +88,51 @@ public class WaterFoamManager : MonoBehaviour
 
     #region Public Methods
     /// <summary>
-    /// Registra un nuevo generador de espuma
+    /// Controla la intensidad del glow divino
     /// </summary>
-    public void RegisterFoamGenerator(IFoamGenerator generator)
+    public void SetGlowIntensity(float intensity)
     {
-        if (generator != null && !foamGenerators.Contains(generator))
+        glowIntensity = intensity;
+        if (waterMaterial != null)
         {
-            foamGenerators.Add(generator);
-            Debug.Log($"Foam generator registered. Total generators: {foamGenerators.Count}");
-        }
-    }
-
-    /// <summary>
-    /// Desregistra un generador de espuma
-    /// </summary>
-    public void UnregisterFoamGenerator(IFoamGenerator generator)
-    {
-        if (foamGenerators.Contains(generator))
-        {
-            foamGenerators.Remove(generator);
-            Debug.Log($"Foam generator unregistered. Total generators: {foamGenerators.Count}");
+            waterMaterial.SetFloat(GlowIntensity, intensity);
         }
     }
     #endregion
 
     #region Private Methods
-    /// <summary>
-    /// Actualiza el shader del agua con la posición del generador más cercano/activo
-    /// </summary>
     private void UpdateWaterShader()
     {
-        if (waterMaterial == null)
-        {
-            return;
-        }
+        if (waterMaterial == null || foamSource == null) return;
 
-        // Limpiar generadores inactivos o nulos
-        foamGenerators.RemoveAll(g => g == null || !g.IsActive());
-
-        if (foamGenerators.Count > 0)
+        Vector3 position = foamSource.position + Vector3.up * heightOffset;
+        
+        // Actualizar foam
+        waterMaterial.SetVector(FoamCenter, position);
+        waterMaterial.SetFloat(FoamRadius, foamRadius);
+        
+        // Actualizar glow divino
+        if (enableGlow)
         {
-            // Por ahora tomamos el primer generador activo
-            // Puedes expandir esto para manejar múltiples generadores
-            IFoamGenerator activeGenerator = foamGenerators[0];
-            
-            Vector3 foamPos = activeGenerator.GetFoamPosition();
-            float foamRadius = activeGenerator.GetFoamRadius();
-            
-            // Actualizar shader
-            waterMaterial.SetVector(FoamObjectPos, foamPos);
-            waterMaterial.SetFloat(FoamRadius, foamRadius);
-        }
-        else
-        {
-            // Sin generadores, poner posición fuera del rango visible
-            waterMaterial.SetVector(FoamObjectPos, new Vector4(0, -1000, 0, 0));
+            waterMaterial.SetVector(GlowCenter, position);
+            waterMaterial.SetFloat(GlowRadius, glowRadius);
+            waterMaterial.SetFloat(GlowIntensity, glowIntensity);
         }
     }
 
-    /// <summary>
-    /// Valida que el material del agua esté asignado
-    /// </summary>
     private void ValidateWaterMaterial()
     {
         if (waterMaterial == null)
         {
-            Debug.LogWarning("Water Material no asignado en WaterFoamManager. Buscando automáticamente...");
-            
-            // Intentar encontrar el material automáticamente
-            Renderer waterRenderer = FindObjectOfType<Renderer>();
-            if (waterRenderer != null)
+            GameObject waterObj = GameObject.FindGameObjectWithTag("Water");
+            if (waterObj != null)
             {
-                waterMaterial = waterRenderer.sharedMaterial;
-                Debug.Log("Water Material encontrado automáticamente.");
-            }
-            else
-            {
-                Debug.LogError("No se pudo encontrar el Water Material. Asígnalo manualmente en el Inspector.");
+                Renderer renderer = waterObj.GetComponent<Renderer>();
+                if (renderer != null)
+                {
+                    waterMaterial = renderer.sharedMaterial;
+                    Debug.Log("Water Material encontrado");
+                }
             }
         }
     }
