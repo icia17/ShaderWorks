@@ -57,7 +57,7 @@ Material:
     - __dirty: 0
     m_Colors:
     - _DarkLightWater: {r: 0.5, g: 0.88, b: 0, a: 0}
-    - _FoamObjectPos: {r: 2.39, g: 0, b: -1.76, a: 0}
+    - _FoamObjectPos: {r: 0, g: -1000, b: 0, a: 0}
     - _TextureTIlling: {r: 6, g: 6, b: 0, a: 0}
     - _WaterColor: {r: 0, g: 0.6418293, b: 0.8773585, a: 0}
     - _WaveDirection: {r: 1, g: 0, b: 1, a: 0}
