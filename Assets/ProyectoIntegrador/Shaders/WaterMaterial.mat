@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterDistance
-  m_Shader: {fileID: 4800000, guid: 09bc4f4d72f28414bb2bd2c66547cd9a, type: 3}
+  m_Name: WaterMaterial
+  m_Shader: {fileID: 4800000, guid: c2c26ccbffe161749aafe6216174899d, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -32,7 +32,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WaterNormalTexture:
-        m_Texture: {fileID: 2800000, guid: 26caa126227e12444823b4ddc5e8249b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 24c6819a01b88be4b9931b96a3b8c48b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -42,28 +42,20 @@ Material:
     m_Ints: []
     m_Floats:
     - _DistortionWeight: 0.375
-    - _Float0: 1
-    - _FoamDistance: 1.3
-    - _FoamRadius: 2.86
-    - _FoamStregth: 1.39
-    - _FoamStregth1: 1
+    - _FoamDistance: 0.73
+    - _FoamStregth: 0
     - _FresnelStrength: 1
-    - _GlowFalloff: 2
-    - _GlowIntensity: 1
-    - _GlowRadius: 5
+    - _WaterHeight: 0.6
     - _WaterHeightspeed: 0.6
-    - _WaterOffsetY: 2.81
+    - _WaterOffsetY: 2.5
     - _WaterOpacity: 0.95
-    - _WaterSmoothness: 0.179
+    - _WaterSmoothness: 0.545
     - _WaterVoronoiScale: 20.8
-    - _WaveSpeed: 1
-    - __dirty: 1
+    - _WaveSpeed: 0.3
+    - __dirty: 0
     m_Colors:
-    - _Color0: {r: 0.9528302, g: 0.74912083, b: 0.0764062, a: 0}
     - _DarkLightWater: {r: 0.5, g: 0.88, b: 0, a: 0}
-    - _FoamObjectPos: {r: 1.93, g: 0, b: -1.44, a: 0}
-    - _GlowCenter: {r: 2.07, g: 0.95, b: -2.02, a: 0}
     - _TextureTIlling: {r: 6, g: 6, b: 0, a: 0}
     - _WaterColor: {r: 0, g: 0.6418293, b: 0.8773585, a: 0}
-    - _WaveDirection: {r: 1, g: 0, b: 1, a: 0}
+    - _WaveDirection: {r: -1, g: 0, b: -0.05, a: 0}
   m_BuildTextureStacks: []
