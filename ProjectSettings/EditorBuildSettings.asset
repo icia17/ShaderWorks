@@ -5,65 +5,71 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Grupo 03/01 - Render Texture y Distance Shader/Scenes/SecurityCameraScene.unity
     guid: 5e893a7a37a714e439cfcc62825d3775
-  - enabled: 1
+  - enabled: 0
     path: Assets/Grupo 03/01 - Render Texture y Distance Shader/Scenes/WaveDistortionScene.unity
     guid: e4f8f13cc94320641aa303343b058411
-  - enabled: 1
+  - enabled: 0
     path: Assets/Grupo 03/01 - Render Texture y Distance Shader/Scenes/OneSideWaveDistortionScene.unity
     guid: 8d290811e2a0f2e4ba146bcae725656a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Grupo 03/01 - Render Texture y Distance Shader/Scenes/CubeWaveDistortionScene.unity
     guid: 2ceec59bbf216cf4081f8c2351e8d32f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Grupo 03/01 - Render Texture y Distance Shader/Scenes/RippleInteractiveScene.unity
     guid: 90f2a9d15e964ec42849bebe1754ec0f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Grupo 03/02 - Post-Process Shaders/Scenes/BlackWhitePPScene.unity
     guid: 2d609807ddb6aeb44a7dd94f30813b7b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Grupo 03/02 - Post-Process Shaders/Scenes/BloomAndNoisePPScene.unity
     guid: 6eaed955e6f69a94e8c004a6654b0ba1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Grupo 03/02 - Post-Process Shaders/Scenes/InvertAndPixelatePPScene.unity
     guid: c9a5906352e20c54b9b40a861cd86d7d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Grupo 03/03 - UI Shaders/Scenes/DissolveUIScene.unity
     guid: 2cc28841b3c7b2946b0530bf0fe0d2c4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Grupo 03/03 - UI Shaders/Scenes/DistortionUIScene.unity
     guid: 0852b3b2ae9bedd42a978e678e432096
-  - enabled: 1
+  - enabled: 0
     path: Assets/Grupo 03/03 - UI Shaders/Scenes/FlowUIScene.unity
     guid: c0f1559bc6fb9784eb33b413b0de1ac5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Grupo 03/03 - UI Shaders/Scenes/GlintUIScene.unity
     guid: 1eb7cc657407fcd4e85dcdc19cb0f12a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Grupo 03/03 - UI Shaders/Scenes/LensDistortionUIScene.unity
     guid: 61b8b36214a4fce47a0b5a7386835712
-  - enabled: 1
+  - enabled: 0
     path: Assets/Grupo 03/03 - UI Shaders/Scenes/RotationUIScene.unity
     guid: 6d8189b415a103c409992828b078906a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Grupo 03/04 - Stencil Shaders/Scenes/MaskShaderScene.unity
     guid: 57a8cf04760e2e04a9d87a74683ccfeb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Grupo 03/04 - Stencil Shaders/Scenes/HoleShaderScene.unity
     guid: 64486e69d903f1d4cb17102620765d0a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Grupo 03/04 - Stencil Shaders/Scenes/MaskAndHoleScene.unity
     guid: f4372de69948f9f44816323a3e8b8f0d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Grupo 03/04 - Stencil Shaders/Scenes/FissureShaderScene.unity
     guid: 0bdf648890de64e4380fffd406beeab9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Grupo 03/05 - Proyector Shaders/Scenes/SeleccionProyectorScene.unity
     guid: a274de3032dd46f4e9061bb9db7cb220
-  - enabled: 1
+  - enabled: 0
     path: Assets/Grupo 03/05 - Proyector Shaders/Scenes/FollowProyectorScene.unity
     guid: f91e96437b6eb1a4aa04249dd18c61b9
+  - enabled: 1
+    path: Assets/ProyectoIntegrador/Scenes/PI_03.unity
+    guid: 77502ad1ad1e1184ea0f06d4629fdcc8
+  - enabled: 1
+    path: Assets/ProyectoIntegrador/Scenes/PI_04.unity
+    guid: 35b8e8509ee659142ac8da0476ab7db3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 6522dae5592a71d4fb217fe4cc08ba13, type: 3}

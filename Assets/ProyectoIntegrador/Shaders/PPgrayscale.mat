@@ -34,7 +34,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Intenisty: 1
-    - _Intensity: 0
+    - _Intensity: 1
     - _ScreenBrightness2: 1.53
     - _VignetteFalloff2: 0
     - _VignetteSharpness2: 0
