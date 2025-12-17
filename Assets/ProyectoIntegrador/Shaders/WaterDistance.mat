@@ -49,7 +49,7 @@ Material:
     - _FoamStregth1: 1
     - _FresnelStrength: 1
     - _GlowFalloff: 2
-    - _GlowIntensity: 0
+    - _GlowIntensity: 0.8766661
     - _GlowRadius: 5
     - _WaterHeightspeed: 0.6
     - _WaterOffsetY: 2.81
