@@ -121,12 +121,12 @@ Shader "Gold"
 }
 /*ASEBEGIN
 Version=18900
-1273.6;73.6;160.4;546.2;-59.61108;1158.015;3.180377;False;False
+997.6;73.6;368.4;532.6;-38.25112;1277.055;3.480377;False;False
 Node;AmplifyShaderEditor.FresnelNode;18;639.8076,-364.1746;Inherit;False;Standard;WorldNormal;ViewDir;False;False;5;0;FLOAT3;0,0,1;False;4;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;2;False;3;FLOAT;4;False;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;32;730.4326,-108.8383;Inherit;False;Property;_Strength;Strength;5;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;31;951.2278,-290.904;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.ColorNode;2;915.7795,-112.5043;Inherit;False;Property;_GoldHighlight;GoldHighlight;1;0;Create;True;0;0;0;False;0;False;1,0.9647059,0.6901961,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.SamplerNode;27;828.2795,-962.3251;Inherit;True;Property;_TextureSample0;Texture Sample 0;4;0;Create;True;0;0;0;False;0;False;-1;b1e672220c5bd874fa0f532b70df6c4a;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.SamplerNode;27;828.2795,-962.3251;Inherit;True;Property;_TextureSample0;Texture Sample 0;4;0;Create;True;0;0;0;False;0;False;-1;b1e672220c5bd874fa0f532b70df6c4a;b1e672220c5bd874fa0f532b70df6c4a;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;33;1126.616,-296.8013;Inherit;False;2;2;0;FLOAT;0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.ColorNode;1;1029.162,-576.8066;Inherit;False;Property;_GoldBase;GoldBase;0;0;Create;True;0;0;0;False;0;False;0.9320754,0.8965651,0,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.RangedFloatNode;16;1249.315,-141.1412;Inherit;False;Property;_Metallic;Metallic;3;0;Create;True;0;0;0;False;0;False;1;1;0;0;0;1;FLOAT;0
@@ -141,4 +141,4 @@ WireConnection;0;2;33;0
 WireConnection;0;3;16;0
 WireConnection;0;4;17;0
 ASEEND*/
-//CHKSM=49E48AEC3E7D0867B65D34841B9191C351E68059
+//CHKSM=1570D161030B1F43F1B6EA60AE3D25EAD35FE234
