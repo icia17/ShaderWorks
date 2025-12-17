@@ -7,13 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Holographic
-  m_Shader: {fileID: 4800000, guid: 9ff65f476033d1f4f8301a2696180d68, type: 3}
+  m_Name: UV fondo
+  m_Shader: {fileID: 4800000, guid: 06177094758fac444a62d2712dfea895, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 0
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -43,10 +43,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _FoilPattern:
-        m_Texture: {fileID: 2800000, guid: f8cede70eb6e05a45889543a48274cfc, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 1, y: 1}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -63,19 +59,25 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Texture0:
-        m_Texture: {fileID: 2800000, guid: 72b9624e6f664844c8846b6414c49387, type: 3}
-        m_Scale: {x: 1.45, y: 1.79}
-        m_Offset: {x: 2.24, y: -1.02}
-    - _texcoord:
-        m_Texture: {fileID: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: 9271c51c3e92da944b7f65bf0737ffa7, type: 3}
         m_Scale: {x: 1, y: 1}
+        m_Offset: {x: -0.07, y: 0}
+    - _TextureSample1:
+        m_Texture: {fileID: 2800000, guid: 25a4eb7023345a2498c321110a7ac714, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 2.34, y: 0}
+    - _TextureSample2:
+        m_Texture: {fileID: 2800000, guid: f8cede70eb6e05a45889543a48274cfc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0.59, y: 0}
+    - _TextureSample3:
+        m_Texture: {fileID: 2800000, guid: 30d6feab102694b42a2cb9e12f796172, type: 3}
+        m_Scale: {x: 0.51, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BrightPower: 0.65
     - _BumpScale: 1
-    - _ColorDensity: 3.44
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -87,6 +89,9 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
+    - _Sombra1: -0.24
+    - _Sombra2: -0.03
+    - _Sombra3: -0.5
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
@@ -94,6 +99,10 @@ Material:
     - __dirty: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color0: {r: 1, g: 0.96548164, b: 0.8509433, a: 0}
+    - _Color1: {r: 1, g: 0.745283, b: 0.8642222, a: 0}
+    - _Color2: {r: 0.89433956, g: 0, b: 0.68101645, a: 0}
+    - _Color3: {r: 0.2920114, g: 0.55329645, b: 0.554717, a: 0}
+    - _Color4: {r: 0.690566, g: 0.52355576, b: 0.04039156, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _PatternTilling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
